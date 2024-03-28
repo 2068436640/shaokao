@@ -1,7 +1,6 @@
 package com.shaokao.view;
 
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.shaokao.util.Factory;
 import com.shaokao.util.ViewAdapter;
 
 import javax.swing.*;
@@ -61,7 +60,7 @@ public class MainFrame extends JFrame {
             }
             SwingUtilities.invokeLater(() -> {
                 // 创建并显示你的 Swing 应用程序
-                MainFrame mf = Factory.MainFrameFactory();
+                MainFrame mf = new MainFrame();
             });
 
     }
