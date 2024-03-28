@@ -1,17 +1,20 @@
 package com.shaokao.view;
 
+import com.shaokao.listener.loginAction;
+
 import javax.swing.*;
 
 public class LoginView extends JPanel {
     public JLabel userText, passText;
     public JTextField userInput, passInput;
     public JButton loginBtn, registBtn;
+    MainFrame mainFrame;
 
-
-    public LoginView() {
+    public LoginView(MainFrame mainFrame) {
         /*
         实例化
          */
+        this.mainFrame = mainFrame;
         userText = new JLabel("账号：");
         passText = new JLabel("密码");
         userInput = new JTextField();
@@ -38,6 +41,7 @@ public class LoginView extends JPanel {
         this.add(passInput);
         this.add(loginBtn);
         this.add(registBtn);
+        loginBtn.addActionListener(new loginAction(mainFrame));
 
     }
 
