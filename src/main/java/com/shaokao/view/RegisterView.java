@@ -1,43 +1,47 @@
 package com.shaokao.view;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class RegisterView extends JPanel {
-    public JLabel userText, passText,repassText,msg;
-    JButton registBtn,resetBtn;
-    TextField userNameInput,PassInput,rePassInput;
+    public JLabel userText;
+    public JLabel passText;
+    public JLabel repassText;
+    public JTextField userInput;
+    public JPasswordField passInput;
+    public JPasswordField repassInput;
+    public JButton registerBut;
+    public JButton resetBut;
 
     public RegisterView() {
-        userText = new JLabel("账号");
-        passText = new JLabel("密码");
-        repassText = new JLabel("确认密码：");
-        registBtn = new JButton("注册");
-        resetBtn = new JButton("重置");
-        msg = new JLabel();
-        userNameInput = new TextField();
-        PassInput = new TextField();
-        rePassInput = new TextField();
+        /*1.实例化界面组件*/
+        userText = new JLabel("账号：");
+        passText  = new JLabel("密码：");
+        repassText  = new JLabel("重复密码：");
+        userInput = new JTextField();
+        passInput = new JPasswordField();
+        repassInput = new JPasswordField();
+        registerBut = new JButton("注册");
+        resetBut = new JButton("重置");
 
+        /*2.设置组件位置*/
         this.setLayout(null);
-        userText.setBounds(200, 50, 50, 36);
-        passText.setBounds(200, 100, 50, 36);
-        repassText.setBounds(200,150,50,36);
-        userNameInput.setBounds(250, 50, 300, 36);
-        PassInput.setBounds(250, 100, 300, 36);
-        rePassInput.setBounds(250,150,300,36);
-        msg.setBounds(300,190,100,36);
-        registBtn.setBounds(250, 230, 300, 36);
-        resetBtn.setBounds(250, 270, 300, 36);
+        userText.setBounds(250,50,50,36);
+        passText.setBounds(250,100,50,36);
+        repassText.setBounds(225,150,70,36);
+        userInput.setBounds(300,50,300,36);
+        passInput.setBounds(300,100,300,36);
+        repassInput.setBounds(300,150,300,36);
+        registerBut.setBounds(275,200,300,36);
+        resetBut.setBounds(275,250,300,36);
+
+        /*3.将组件添加至容器*/
         this.add(userText);
-        this.add(userNameInput);
         this.add(passText);
-        this.add(PassInput);
         this.add(repassText);
-        this.add(rePassInput);
-        this.add(msg);
-        this.add(new JLabel());
-        this.add(registBtn);
-        this.add(resetBtn);
+        this.add(userInput);
+        this.add(passInput);
+        this.add(repassInput);
+        this.add(registerBut);
+        this.add(resetBut);
     }
 }

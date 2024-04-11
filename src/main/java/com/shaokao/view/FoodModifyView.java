@@ -1,39 +1,47 @@
 package com.shaokao.view;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class FoodModifyView extends JPanel {
-    public JLabel foodName, classify,price;
-    JButton modifyBtn,closeBtn;
-    TextField foodNameInput,classifyInput,priceInput;
+    public JLabel nameText;
+    public JLabel categoryText;
+    public JLabel priceText;
+    public JTextField nameInput;
+    public JTextField categoryInput;
+    public JTextField priceInput;
+    public JButton addBut;
+    public JButton cancelBut;
+
     public FoodModifyView() {
-        foodName = new JLabel("菜品名称");
-        classify = new JLabel("菜品分类");
-        price = new JLabel("菜品价格");
-        modifyBtn = new JButton("修改");
-        closeBtn = new JButton("取消");
-        foodNameInput = new TextField();
-        classifyInput = new TextField();
-        priceInput = new TextField();
+        /*1.实例化界面组件*/
+        nameText = new JLabel("菜品名称：");
+        categoryText  = new JLabel("菜品分类：");
+        priceText  = new JLabel("菜品价格：");
+        nameInput = new JTextField("烈火牛肉");
+        categoryInput = new JTextField("烧烤");
+        priceInput = new JTextField("68.00");
+        addBut = new JButton("修改");
+        cancelBut = new JButton("取消");
 
+        /*2.设置组件位置*/
         this.setLayout(null);
-        foodName.setBounds(200, 50, 50, 36);
-        classify.setBounds(200, 100, 50, 36);
-        price.setBounds(200,150,50,36);
-        foodNameInput.setBounds(250, 50, 300, 36);
-        classifyInput.setBounds(250, 100, 300, 36);
-        priceInput.setBounds(250,150,300,36);
-        modifyBtn.setBounds(250, 190, 300, 36);
-        closeBtn.setBounds(250, 230, 300, 36);
+        nameText.setBounds(230,50,100,36);
+        categoryText.setBounds(230,100,100,36);
+        priceText.setBounds(230,150,100,36);
+        nameInput.setBounds(300,50,300,36);
+        categoryInput.setBounds(300,100,300,36);
+        priceInput.setBounds(300,150,300,36);
+        addBut.setBounds(265,200,300,36);
+        cancelBut.setBounds(265,250,300,36);
 
-        this.add(foodName);
-        this.add(foodNameInput);
-        this.add(classify);
-        this.add(classifyInput);
-        this.add(price);
+        /*3.将组件添加至容器*/
+        this.add(nameText);
+        this.add(categoryText);
+        this.add(priceText);
+        this.add(nameInput);
+        this.add(categoryInput);
         this.add(priceInput);
-        this.add(modifyBtn);
-        this.add(closeBtn);
+        this.add(addBut);
+        this.add(cancelBut);
     }
 }
