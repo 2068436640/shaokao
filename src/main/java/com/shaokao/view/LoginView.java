@@ -8,6 +8,7 @@ import javax.swing.*;
 public class LoginView extends JPanel {
     /* 声明登录界面的组件*/
     public JLabel userText;
+    public JLabel msg;
     public JLabel passText;
     public JTextField userInput;
     public JPasswordField passInput;
@@ -23,7 +24,7 @@ public class LoginView extends JPanel {
          passInput = new JPasswordField();
          loginBut = new JButton("登录");
          resetBut = new JButton("注册");
-
+         msg = new JLabel();
          this.mainFrame = mainFrame;
 
          /*1.1给loginView绑定事件监听器 */
@@ -33,6 +34,7 @@ public class LoginView extends JPanel {
          /*2.设置组件位置*/
         this.setLayout(null);
         userText.setBounds(250,100,50,36);
+        msg.setBounds(300,50,300,36);
         passText.setBounds(250,150,50,36);
         userInput.setBounds(300,100,300,36);
         passInput.setBounds(300,150,300,36);
@@ -46,5 +48,6 @@ public class LoginView extends JPanel {
         this.add(passInput);
         this.add(loginBut);
         this.add(resetBut);
+        this.add(msg);
     }
 }
